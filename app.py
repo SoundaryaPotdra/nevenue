@@ -11,11 +11,17 @@ from dotenv import load_dotenv
 # CONFIGURATION
 # ============================================================
 
-load_dotenv()
+#load_dotenv()
 
-SHOPIFY_STORE = os.getenv("SHOPIFY_STORE")
-SHOPIFY_CLIENT_ID = os.getenv("SHOPIFY_CLIENT_ID")
-SHOPIFY_CLIENT_SECRET = os.getenv("SHOPIFY_CLIENT_SECRET")
+#SHOPIFY_STORE = os.getenv("SHOPIFY_STORE")
+#SHOPIFY_CLIENT_ID = os.getenv("SHOPIFY_CLIENT_ID")
+#SHOPIFY_CLIENT_SECRET = os.getenv("SHOPIFY_CLIENT_SECRET")
+
+import streamlit as st
+
+SHOPIFY_STORE = st.secrets["SHOPIFY_STORE"]
+SHOPIFY_CLIENT_ID = st.secrets["SHOPIFY_CLIENT_ID"]
+SHOPIFY_CLIENT_SECRET = st.secrets["SHOPIFY_CLIENT_SECRET"]
 
 SHOPIFY_API_VERSION = "2026-07"
 
